@@ -1,16 +1,33 @@
-# React + Vite
+🌟 Crypto Dashboard React
+Um dashboard de visualização de dados reativo construído com React, focado em fornecer análise histórica e métricas de mercado em tempo real para as principais criptomoedas (Bitcoin, Ethereum, Solana, etc.).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto demonstra proficiência em React moderno, gerenciamento de estado complexo e integração de API externa para visualização de dados.
 
-Currently, two official plugins are available:
+🚀 Funcionalidades Chave
+Análise Histórica e em Tempo Real: Visualização de preço, capitalização de mercado e volume para diversos períodos (24h, 7 dias, 1 ano, etc.).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Gráfico Combinado: Utiliza Chart.js para renderizar um gráfico dual (Preço em linha e Volume em barras), permitindo uma análise complexa de dados em uma única interface.
 
-## React Compiler
+Controles Interativos: Permite que o usuário alterne dinamicamente entre diferentes moedas e períodos de tempo, acionando novas chamadas à API de forma reativa.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Formatação Inteligente: Implementação de lógicas de formatação de números para exibir valores de Capitalização de Mercado e Volume em formatos concisos (ex: $1.23T para Trilhões), garantindo usabilidade nos cards de informação.
 
-## Expanding the ESLint configuration
+⚙️ Tecnologias Utilizadas
+Frontend Principal: React (Hooks: useState, useEffect, useMemo)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Visualização de Dados: Chart.js (com react-chartjs-2)
+
+Estilização: CSS Simples (focado em responsividade e design limpo)
+
+Comunicação com API: Fetch API (para consumo da API CoinGecko)
+
+💡 Desafios Técnicos Resolvidos
+Esta seção é a mais importante, pois mostra seu raciocínio como desenvolvedor:
+
+Otimização de Performance (useMemo): Utilização do useMemo para processar e formatar os dados brutos da API para o formato ideal do Chart.js, evitando recálculos desnecessários e garantindo que o dashboard permaneça rápido.
+
+Gerenciamento de Assincronicidade: Implementação do Hook useEffect para buscar novos dados apenas quando o estado da moeda ou do período muda ([selectedCoin, selectedDays]), evitando loops de renderização infinitos.
+
+Tratamento de Erros e UX: Criação de um Loading Skeleton para manter o usuário engajado durante o carregamento de dados e implementação de lógica para capturar e exibir falhas na API (incluindo a detecção do erro 429 Rate Limit).
+
+Componentização e Escalabilidade: Arquitetura limpa com componentes reutilizáveis (InfoCard, DashboardControls), facilitando a adição de novas moedas e funcionalidades no futuro.
