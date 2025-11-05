@@ -64,12 +64,3 @@ Certifique-se de ter o Node.js instalado.
     ```
 
 O dashboard estará disponível em `http://localhost:5173`.
-
----
-
-## 🔗 Links
-
-| Tipo | Status | Link (Substitua!) |
-| :--- | :--- | :--- |
-| **🔗 Deploy Online** | 🌐 Online | `[COLOQUE A URL PÚBLICA DO VERCEL/NETLIFY AQUI]` |
-| **📁 Repositório no GitHub** | 💾 Código-Fonte | `[COLOQUE O LINK PARA ESTE REPOSITÓRIO]` |
